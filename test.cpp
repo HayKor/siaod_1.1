@@ -10,10 +10,11 @@ void testBothMethodsMedium(size_t n, int runs = 100) {
 
   auto testFirst = [&](size_t n) { return delFirstMethod(arr, n, '_'); };
   auto testOther = [&](size_t n) { return delOtherMethod(copy, n, '_'); };
-  std::cout << "testBothMethodsMedium() for " << runs << " runs: " << std::endl;
-  std::cout << "\ttestFirstMethodMedium() statistics: "
+  std::cout << "\ttestBothMethodsMedium() for " << runs
+            << " runs: " << std::endl;
+  std::cout << "\t\ttestFirstMethodMedium() statistics: "
             << measureTime(testFirst, n).toString() << std::endl;
-  std::cout << "\ttestOtherMethodMedium() statistics: "
+  std::cout << "\t\ttestOtherMethodMedium() statistics: "
             << measureTime(testOther, n).toString() << std::endl;
 
   delete[] arr;
@@ -21,8 +22,8 @@ void testBothMethodsMedium(size_t n, int runs = 100) {
 }
 
 void testFirstMethod(size_t n, int runs = 100) {
-  std::cout << "testFirstMethod() for " << runs << " runs:" << std::endl;
-  std::cout << "\ttestFirstMethodWorst() statistics: "
+  std::cout << "\ttestFirstMethod() for " << runs << " runs:" << std::endl;
+  std::cout << "\t\ttestFirstMethodWorst() statistics: "
             << testTimes(
                    [](size_t len) {
                      char x[len];
@@ -33,7 +34,7 @@ void testFirstMethod(size_t n, int runs = 100) {
                    runs, n)
                    .toString()
             << std::endl;
-  std::cout << "\ttestFirstMethodBest() statistics: "
+  std::cout << "\t\ttestFirstMethodBest() statistics: "
             << testTimes(
                    [](size_t len) {
                      char x[len];
@@ -47,8 +48,8 @@ void testFirstMethod(size_t n, int runs = 100) {
 }
 
 void testOtherMethod(size_t n, int runs = 100) {
-  std::cout << "testOtherMethod() for " << runs << " runs:" << std::endl;
-  std::cout << "\ttestOtherMethodWorst() statistics: "
+  std::cout << "\ttestOtherMethod() for " << runs << " runs:" << std::endl;
+  std::cout << "\t\ttestOtherMethodWorst() statistics: "
             << testTimes(
                    [](size_t len) {
                      char x[len];
@@ -58,7 +59,7 @@ void testOtherMethod(size_t n, int runs = 100) {
                    runs, n)
                    .toString()
             << std::endl;
-  std::cout << "\ttestOtherMethodBest() statistics: "
+  std::cout << "\t\ttestOtherMethodBest() statistics: "
             << testTimes(
                    [](size_t len) {
                      char x[len];
