@@ -3,66 +3,69 @@
 #include <cstring>
 #include <iostream>
 
-ComplexityMetrics _testFirstMethodWorst(size_t len) {
-  char x[len];
-  std::memset(x, '_', len);
+void testBothMethodsMedium(size_t n, int runs = 100) {
+  char *arr = generateRandomArray(n, '_', 'A');
+  char *copy = new char[n + 1];
+  std::memcpy(copy, arr, n);
 
-  return delFirstMethod(x, len, '_');
+  auto testFirst = [&](size_t n) { return delFirstMethod(arr, n, '_'); };
+  auto testOther = [&](size_t n) { return delOtherMethod(copy, n, '_'); };
+  std::cout << "testBothMethodsMedium() for " << runs << " runs: " << std::endl;
+  std::cout << "\ttestFirstMethodMedium() statistics: "
+            << measureTime(testFirst, n).toString() << std::endl;
+  std::cout << "\ttestOtherMethodMedium() statistics: "
+            << measureTime(testOther, n).toString() << std::endl;
+
+  delete[] arr;
+  delete[] copy;
 }
 
-ComplexityMetrics _testOtherMethodWorst(size_t len) {
-  char x[len];
-  std::memset(x, 'A', len);
+void testFirstMethod(size_t n, int runs = 100) {
+  std::cout << "testFirstMethod() for " << runs << " runs:" << std::endl;
+  std::cout << "\ttestFirstMethodWorst() statistics: "
+            << testTimes(
+                   [](size_t len) {
+                     char x[len];
+                     std::memset(x, '_', len);
 
-  return delOtherMethod(x, len, '_');
-}
-
-ComplexityMetrics _testFirstMethodMedium(size_t len) {
-  char *arr = generateRandomArray(len, '_', 'A');
-
-  return delFirstMethod(arr, len, '_');
-}
-
-ComplexityMetrics _testOtherMethodMedium(size_t len) {
-  char *arr = generateRandomArray(len, '_', 'A');
-
-  return delOtherMethod(arr, len, '_');
-}
-
-ComplexityMetrics _testFirstMethodBest(size_t len) {
-  char x[len];
-  std::memset(x, 'A', len);
-
-  return delFirstMethod(x, len, '_');
-}
-
-ComplexityMetrics _testOtherMethodBest(size_t len) {
-  char x[len];
-  std::memset(x, '_', len);
-
-  return delOtherMethod(x, len, '_');
-}
-
-void testFirstMethod(int n) {
-  const char intent = '\t';
-  std::cout << "testFirstMethod() for " << n << " runs:" << std::endl;
-  std::cout << intent << "testFirstMethodWorst() statistics: "
-            << testTimes(_testFirstMethodWorst, n, 100).toString() << std::endl;
-  std::cout << intent << "testFirstMethodMedium() statistics: "
-            << testTimes(_testFirstMethodMedium, n, 100).toString()
+                     return delFirstMethod(x, len, '_');
+                   },
+                   runs, n)
+                   .toString()
             << std::endl;
-  std::cout << intent << "testFirstMethodBest() statistics: "
-            << testTimes(_testFirstMethodBest, n, 100).toString() << std::endl;
+  std::cout << "\ttestFirstMethodBest() statistics: "
+            << testTimes(
+                   [](size_t len) {
+                     char x[len];
+                     std::memset(x, 'A', len);
+
+                     return delFirstMethod(x, len, '_');
+                   },
+                   runs, n)
+                   .toString()
+            << std::endl;
 }
 
-void testOtherMethod(int n) {
-  const char intent = '\t';
-  std::cout << "testOtherMethod() for " << n << " runs:" << std::endl;
-  std::cout << intent << "testOtherMethodWorst() statistics: "
-            << testTimes(_testOtherMethodWorst, n, 100).toString() << std::endl;
-  std::cout << intent << "testOtherMethodMedium() statistics: "
-            << testTimes(_testOtherMethodMedium, n, 100).toString()
+void testOtherMethod(size_t n, int runs = 100) {
+  std::cout << "testOtherMethod() for " << runs << " runs:" << std::endl;
+  std::cout << "\ttestOtherMethodWorst() statistics: "
+            << testTimes(
+                   [](size_t len) {
+                     char x[len];
+                     std::memset(x, 'A', len);
+                     return delOtherMethod(x, len, '_');
+                   },
+                   runs, n)
+                   .toString()
             << std::endl;
-  std::cout << intent << "testOtherMethodBest() statistics: "
-            << testTimes(_testOtherMethodBest, n, 100).toString() << std::endl;
+  std::cout << "\ttestOtherMethodBest() statistics: "
+            << testTimes(
+                   [](size_t len) {
+                     char x[len];
+                     std::memset(x, '_', len);
+                     return delOtherMethod(x, len, '_');
+                   },
+                   runs, n)
+                   .toString()
+            << std::endl;
 }

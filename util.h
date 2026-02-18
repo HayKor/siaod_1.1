@@ -2,6 +2,7 @@
 #define UTIL_H
 
 #include <cstddef>
+#include <functional>
 #include <string>
 
 struct ComplexityMetrics {
@@ -19,7 +20,7 @@ struct ComplexityMetrics {
   }
 };
 
-typedef ComplexityMetrics (*TestFunc)(size_t);
+using TestFunc = std::function<ComplexityMetrics(size_t)>;
 
 ComplexityMetrics measureTime(TestFunc func, size_t len);
 ComplexityMetrics testTimes(TestFunc func, int n, size_t len);
