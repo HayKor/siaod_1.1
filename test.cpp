@@ -18,29 +18,15 @@ ComplexityMetrics _testOtherMethodWorst(size_t len) {
 }
 
 ComplexityMetrics _testFirstMethodMedium(size_t len) {
-  // TODO
-  char x[] = {'_', 'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_',
-              'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M',
-              'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I',
-              '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_',
-              '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_', '_',
-              'R', '_', '_', 'E', 'A', '_', '_', '\0'};
-  size_t n = sizeof(x);
+  char *arr = generateRandomArray(len, '_', 'A');
 
-  return delFirstMethod(x, n, '_');
+  return delFirstMethod(arr, len, '_');
 }
 
 ComplexityMetrics _testOtherMethodMedium(size_t len) {
-  // TODO
-  char x[] = {'_', 'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_',
-              'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M',
-              'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I',
-              '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_',
-              '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_', '_',
-              'R', '_', '_', 'E', 'A', '_', '_', '\0'};
-  size_t n = sizeof(x);
+  char *arr = generateRandomArray(len, '_', 'A');
 
-  return delOtherMethod(x, n, '_');
+  return delOtherMethod(arr, len, '_');
 }
 
 ComplexityMetrics _testFirstMethodBest(size_t len) {
