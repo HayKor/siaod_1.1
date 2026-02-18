@@ -13,15 +13,25 @@ ComplexityMetrics measureTime(ComplexityMetrics (*func)()) {
   return metrics;
 }
 
-ComplexityMetrics _testFirstMethodShort() {
-  char x[] = {'_', 'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '\0'};
+ComplexityMetrics _testFirstMethodWorst() {
+  char x[] = {'_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '\0'};
   size_t n = sizeof(x);
 
   return delFirstMethod(x, n, '_');
 }
 
-ComplexityMetrics _testOtherMethodShort() {
-  char x[] = {'_', 'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '\0'};
+ComplexityMetrics _testOtherMethodWorst() {
+  char x[] = {'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', '\0'};
   size_t n = sizeof(x);
 
   return delOtherMethod(x, n, '_');
@@ -29,7 +39,11 @@ ComplexityMetrics _testOtherMethodShort() {
 
 ComplexityMetrics _testFirstMethodMedium() {
   char x[] = {'_', 'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_',
-              'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '\0'};
+              'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M',
+              'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I',
+              '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_',
+              '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_', '_',
+              'R', '_', '_', 'E', 'A', '_', '_', '\0'};
   size_t n = sizeof(x);
 
   return delFirstMethod(x, n, '_');
@@ -37,35 +51,35 @@ ComplexityMetrics _testFirstMethodMedium() {
 
 ComplexityMetrics _testOtherMethodMedium() {
   char x[] = {'_', 'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_',
-              'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '\0'};
+              'M', 'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M',
+              'I', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I',
+              '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_',
+              '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'M', 'I', '_', '_',
+              'R', '_', '_', 'E', 'A', '_', '_', '\0'};
   size_t n = sizeof(x);
 
   return delOtherMethod(x, n, '_');
 }
 
-ComplexityMetrics _testFirstMethodLong() {
-  char x[] = {'_', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'I',
-              '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'I', '_',
-              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', 'E',
-              'A', '_', '_', '_', '_', '_', '_', '_', 'E', 'A', '_', '_',
-              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', 'E',
-              'A', '_', '_', '_', 'M', 'I', '_', '_', 'R', '_', '_', '_',
-              '_', '_', 'M', 'I', '_', '_', 'R', '_', '_', '_', '_', '_',
-              'M', 'I', '_', '_', 'R', '_', '_', '_', '_', '\0'};
+ComplexityMetrics _testFirstMethodBest() {
+  char x[] = {'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',
+              'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', '\0'};
   size_t n = sizeof(x);
 
   return delFirstMethod(x, n, '_');
 }
 
-ComplexityMetrics _testOtherMethodLong() {
-  char x[] = {'_', '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'I',
-              '_', '_', 'R', '_', '_', 'E', 'A', '_', '_', '_', 'I', '_',
-              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', 'E',
-              'A', '_', '_', '_', '_', '_', '_', '_', 'E', 'A', '_', '_',
-              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', 'E',
-              'A', '_', '_', '_', 'M', 'I', '_', '_', 'R', '_', '_', '_',
-              '_', '_', 'M', 'I', '_', '_', 'R', '_', '_', '_', '_', '_',
-              'M', 'I', '_', '_', 'R', '_', '_', '_', '_', '\0'};
+ComplexityMetrics _testOtherMethodBest() {
+  char x[] = {'_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
+              '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '\0'};
   size_t n = sizeof(x);
 
   return delOtherMethod(x, n, '_');
@@ -74,21 +88,21 @@ ComplexityMetrics _testOtherMethodLong() {
 void testFirstMethod() {
   const char intent = '\t';
   std::cout << "testFirstMethod():" << std::endl;
-  std::cout << intent << "testFirstMethodShort() statistics: "
-            << measureTime(_testFirstMethodShort).toString() << std::endl;
+  std::cout << intent << "testFirstMethodWorst() statistics: "
+            << measureTime(_testFirstMethodWorst).toString() << std::endl;
   std::cout << intent << "testFirstMethodMedium() statistics: "
             << measureTime(_testFirstMethodMedium).toString() << std::endl;
-  std::cout << intent << "testFirstMethodLong() statistics: "
-            << measureTime(_testFirstMethodLong).toString() << std::endl;
+  std::cout << intent << "testFirstMethodBest() statistics: "
+            << measureTime(_testFirstMethodBest).toString() << std::endl;
 }
 
 void testOtherMethod() {
   const char intent = '\t';
   std::cout << "testOtherMethod():" << std::endl;
-  std::cout << intent << "testOtherMethodShort() statistics: "
-            << measureTime(_testOtherMethodShort).toString() << std::endl;
+  std::cout << intent << "testOtherMethodWorst() statistics: "
+            << measureTime(_testOtherMethodWorst).toString() << std::endl;
   std::cout << intent << "testOtherMethodMedium() statistics: "
             << measureTime(_testOtherMethodMedium).toString() << std::endl;
-  std::cout << intent << "testOtherMethodLong() statistics: "
-            << measureTime(_testOtherMethodLong).toString() << std::endl;
+  std::cout << intent << "testOtherMethodBest() statistics: "
+            << measureTime(_testOtherMethodBest).toString() << std::endl;
 }
