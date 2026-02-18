@@ -1,5 +1,8 @@
 #include "util.h"
 #include <chrono>
+#include <random>
+
+static std::mt19937 rng(std::random_device{}());
 
 ComplexityMetrics measureTime(TestFunc func, size_t len) {
   auto start = std::chrono::high_resolution_clock::now();
@@ -28,4 +31,16 @@ ComplexityMetrics testTimes(TestFunc func, int n, size_t len) {
   metrics.total /= n;
 
   return metrics;
+}
+
+char *generateRandomArray(size_t size, const char key, const char otherChar) {
+  char *arr = new char[size + 1];
+
+  std::bernoulli_distribution dist(0.5);
+
+  for (size_t i = 0; i < size; i++) {
+    arr[i] = dist(rng) ? key : otherChar;
+  }
+  arr[size] = '\0';
+  return arr;
 }
