@@ -2,8 +2,8 @@
 #include <iostream>
 
 int main() {
-  testFirstMethod();
+  testFirstMethod(100);
   std::cout << "---------" << std::endl;
-  testOtherMethod();
+  testOtherMethod(100);
   return 0;
 }

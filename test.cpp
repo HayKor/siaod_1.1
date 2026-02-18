@@ -13,6 +13,25 @@ ComplexityMetrics measureTime(ComplexityMetrics (*func)()) {
   return metrics;
 }
 
+ComplexityMetrics testTimes(ComplexityMetrics (*func)(), int n) {
+  ComplexityMetrics metrics;
+
+  for (int i = 0; i < n; i++) {
+    auto m = measureTime(func);
+    metrics.moves += m.moves;
+    metrics.comparisons += m.comparisons;
+    metrics.total += m.total;
+    metrics.duration += m.duration;
+  }
+
+  metrics.duration /= n;
+  metrics.moves /= n;
+  metrics.comparisons /= n;
+  metrics.total /= n;
+
+  return metrics;
+}
+
 ComplexityMetrics _testFirstMethodWorst() {
   char x[] = {'_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
               '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_',
@@ -85,24 +104,24 @@ ComplexityMetrics _testOtherMethodBest() {
   return delOtherMethod(x, n, '_');
 }
 
-void testFirstMethod() {
+void testFirstMethod(int n) {
   const char intent = '\t';
-  std::cout << "testFirstMethod():" << std::endl;
+  std::cout << "testFirstMethod() for " << n << " runs:" << std::endl;
   std::cout << intent << "testFirstMethodWorst() statistics: "
-            << measureTime(_testFirstMethodWorst).toString() << std::endl;
+            << testTimes(_testFirstMethodWorst, n).toString() << std::endl;
   std::cout << intent << "testFirstMethodMedium() statistics: "
-            << measureTime(_testFirstMethodMedium).toString() << std::endl;
+            << testTimes(_testFirstMethodMedium, n).toString() << std::endl;
   std::cout << intent << "testFirstMethodBest() statistics: "
-            << measureTime(_testFirstMethodBest).toString() << std::endl;
+            << testTimes(_testFirstMethodBest, n).toString() << std::endl;
 }
 
-void testOtherMethod() {
+void testOtherMethod(int n) {
   const char intent = '\t';
-  std::cout << "testOtherMethod():" << std::endl;
+  std::cout << "testOtherMethod() for " << n << " runs:" << std::endl;
   std::cout << intent << "testOtherMethodWorst() statistics: "
-            << measureTime(_testOtherMethodWorst).toString() << std::endl;
+            << testTimes(_testOtherMethodWorst, n).toString() << std::endl;
   std::cout << intent << "testOtherMethodMedium() statistics: "
-            << measureTime(_testOtherMethodMedium).toString() << std::endl;
+            << testTimes(_testOtherMethodMedium, n).toString() << std::endl;
   std::cout << intent << "testOtherMethodBest() statistics: "
-            << measureTime(_testOtherMethodBest).toString() << std::endl;
+            << testTimes(_testOtherMethodBest, n).toString() << std::endl;
 }
