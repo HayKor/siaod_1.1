@@ -1,4 +1,4 @@
-#include "methods.h"
+#include "include/methods.h"
 
 ComplexityMetrics delFirstMethod(char *x, size_t &n, const char &key) {
   ComplexityMetrics metrics;

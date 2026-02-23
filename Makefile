@@ -1,10 +1,11 @@
 TARGET = out
 TARGET_PATH = ./build/$(TARGET)
 SOURCE = main.cpp methods.cpp test.cpp util.cpp
-HEADERS = methods.h test.h util.h
+HEADERS = include/methods.h include/test.h include/util.h
+FLAGS = -I./include
 
 $(TARGET_PATH): $(SOURCE) $(HEADERS)
-	clang++ $(SOURCE) -o $(TARGET_PATH)
+	clang++ $(FLAGS) $(SOURCE) -o $(TARGET_PATH)
 
 run: $(TARGET_PATH)
 	./$(TARGET_PATH)
