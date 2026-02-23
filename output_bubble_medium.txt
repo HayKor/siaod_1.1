@@ -1,0 +1,33 @@
+RUNNING FOR N=100
+        testBubbleSort() statistics: Сп=4895, Мп=7314, Тп=12209, took 0.050515 ms
+---------
+RUNNING FOR N=200
+        testBubbleSort() statistics: Сп=19729, Мп=29136, Тп=48865, took 0.174568 ms
+---------
+RUNNING FOR N=500
+        testBubbleSort() statistics: Сп=123889, Мп=189621, Тп=313510, took 1.008826 ms
+---------
+RUNNING FOR N=1000
+        testBubbleSort() statistics: Сп=498905, Мп=727779, Тп=1226684, took 3.873780 ms
+---------
+RUNNING FOR N=2000
+        testBubbleSort() statistics: Сп=1998964, Мп=3050481, Тп=5049445, took 15.783902 ms
+---------
+RUNNING FOR N=5000
+        testBubbleSort() statistics: Сп=12492550, Мп=18647532, Тп=31140082, took 98.859014 ms
+---------
+RUNNING FOR N=10000
+        testBubbleSort() statistics: Сп=49989747, Мп=74735184, Тп=124724931, took 371.227632 ms
+---------
+RUNNING FOR N=100000
+        testBubbleSort() statistics: Сп=4999846715, Мп=7491616611, Тп=12491463326, took 28373.277437 ms
+---------
+RUNNING FOR N=200000
+        testBubbleSort() statistics: Сп=19999890409, Мп=29977430685, Тп=49977321094, took 107892.730332 ms
+---------
+RUNNING FOR N=500000
+        testBubbleSort() statistics: Сп=124999262422, Мп=187751577507, Тп=312750839929, took 691673.869456 ms
+---------
+RUNNING FOR N=1000000
+        testBubbleSort() statistics: Сп=499999500000, Мп=749998500000, Тп=1249998000000, took 2837300.000000 ms
+---------

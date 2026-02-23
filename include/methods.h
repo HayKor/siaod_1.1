@@ -7,5 +7,5 @@
 
 ComplexityMetrics delFirstMethod(char *x, size_t &n, const char &key);
 ComplexityMetrics delOtherMethod(char *x, size_t &n, const char &key);
-
+ComplexityMetrics bubbleSort(int *arr, size_t n);
 #endif // !METHODS_H

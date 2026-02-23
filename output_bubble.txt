@@ -1,0 +1,65 @@
+RUNNING FOR N=100
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=99, Мп=0, Тп=99, took 0.000771 ms
+                testBubbleSortWorst statistics: Сп=99, Мп=0, Тп=99, took 0.000321 ms
+---------
+
+RUNNING FOR N=200
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=199, Мп=0, Тп=199, took 0.000481 ms
+                testBubbleSortWorst statistics: Сп=199, Мп=0, Тп=199, took 0.000441 ms
+---------
+
+RUNNING FOR N=500
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=499, Мп=0, Тп=499, took 0.000992 ms
+                testBubbleSortWorst statistics: Сп=499, Мп=0, Тп=499, took 0.000972 ms
+---------
+
+RUNNING FOR N=1000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=999, Мп=0, Тп=999, took 0.001883 ms
+                testBubbleSortWorst statistics: Сп=999, Мп=0, Тп=999, took 0.001874 ms
+---------
+
+RUNNING FOR N=2000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=1999, Мп=0, Тп=1999, took 0.003697 ms
+                testBubbleSortWorst statistics: Сп=1999, Мп=0, Тп=1999, took 0.003697 ms
+---------
+
+RUNNING FOR N=5000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=4999, Мп=0, Тп=4999, took 0.009117 ms
+                testBubbleSortWorst statistics: Сп=4999, Мп=0, Тп=4999, took 0.009107 ms
+---------
+
+RUNNING FOR N=10000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=9999, Мп=0, Тп=9999, took 0.018184 ms
+                testBubbleSortWorst statistics: Сп=9999, Мп=0, Тп=9999, took 0.018164 ms
+---------
+
+RUNNING FOR N=100000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=99999, Мп=0, Тп=99999, took 0.180561 ms
+                testBubbleSortWorst statistics: Сп=99999, Мп=0, Тп=99999, took 0.180641 ms
+---------
+
+RUNNING FOR N=200000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=199999, Мп=0, Тп=199999, took 0.365820 ms
+                testBubbleSortWorst statistics: Сп=199999, Мп=0, Тп=199999, took 0.375238 ms
+---------
+
+RUNNING FOR N=500000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=499999, Мп=0, Тп=499999, took 0.905348 ms
+                testBubbleSortWorst statistics: Сп=499999, Мп=0, Тп=499999, took 0.921188 ms
+---------
+
+RUNNING FOR N=1000000
+        testBubbleSort() statistics: 
+                testBubbleSortBest statistics: Сп=999999, Мп=0, Тп=999999, took 1.843608 ms
+                testBubbleSortWorst statistics: Сп=999999, Мп=0, Тп=999999, took 1.836154 ms
+---------

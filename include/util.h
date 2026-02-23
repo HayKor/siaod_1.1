@@ -25,4 +25,5 @@ using TestFunc = std::function<ComplexityMetrics(size_t)>;
 ComplexityMetrics measureTime(TestFunc func, size_t len);
 ComplexityMetrics testTimes(TestFunc func, int n, size_t len);
 char *generateRandomArray(size_t size, const char key, const char otherChar);
+int *generateRandomIntArray(size_t n);
 #endif // !UTIL_H

@@ -3,6 +3,38 @@
 #include <cstring>
 #include <iostream>
 
+void testBubbleSortWorst(size_t n) {
+  int *arr = new int[n];
+  for (int i = n; i > 0; i--)
+    arr[i] = i;
+  auto test = [&](size_t n) { return bubbleSort(arr, n); };
+  std::cout << "\t\ttestBubbleSortWorst statistics: "
+            << measureTime(test, n).toString() << std::endl;
+}
+
+void testBubbleSortBest(size_t n) {
+  int *arr = new int[n];
+  for (int i = 0; i < n; i++)
+    arr[i] = i;
+  auto test = [&](size_t n) { return bubbleSort(arr, n); };
+  std::cout << "\t\ttestBubbleSortBest statistics: "
+            << measureTime(test, n).toString() << std::endl;
+}
+
+void testBubbleSortMedium(size_t n) {
+  int *arr = generateRandomIntArray(n);
+  auto test = [&](size_t n) { return bubbleSort(arr, n); };
+  std::cout << "\t\ttestBubbleSortMedium() statistics: "
+            << measureTime(test, n).toString() << std::endl;
+
+  delete[] arr;
+}
+
+void testBubbleSort(size_t n) {
+  testBubbleSortBest(n);
+  testBubbleSortWorst(n);
+}
+
 void testBothMethodsMedium(size_t n, int runs = 100) {
   char *arr = generateRandomArray(n, '_', 'A');
   char *copy = new char[n + 1];

@@ -52,6 +52,7 @@
     #outline(title: [Содержание])
     #pagebreak()
     #doc
+    #pagebreak()
     #print-bibliography()
 ]
 #let admonition(title, body, type: "info") = {

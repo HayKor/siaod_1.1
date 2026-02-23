@@ -39,3 +39,29 @@ ComplexityMetrics delOtherMethod(char *x, size_t &n, const char &key) {
   metrics.total = metrics.comparisons + metrics.moves;
   return metrics;
 }
+
+ComplexityMetrics bubbleSort(int *arr, size_t n) {
+  ComplexityMetrics metrics;
+
+  bool swapped;
+  for (size_t i = 0; i < n - 1; ++i) {
+    swapped = false;
+    for (size_t j = 0; j < n - 1 - i; ++j) {
+      metrics.comparisons++;
+
+      if (arr[j] > arr[j + 1]) {
+        int temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+
+        metrics.moves += 3;
+        swapped = true;
+      }
+    }
+    if (!swapped)
+      break;
+  }
+
+  metrics.total = metrics.comparisons + metrics.moves;
+  return metrics;
+}

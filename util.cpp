@@ -44,3 +44,11 @@ char *generateRandomArray(size_t size, const char key, const char otherChar) {
   arr[size] = '\0';
   return arr;
 }
+
+int *generateRandomIntArray(size_t n) {
+  int *arr = new int[n];
+  for (size_t i = 0; i < n; ++i) {
+    arr[i] = (rand() % n) + 1;
+  }
+  return arr;
+}
