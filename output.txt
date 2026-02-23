@@ -1,0 +1,69 @@
+RUNNING FOR N=100
+	testFirstMethod() for 1 runs:
+		testFirstMethodWorst() statistics: Сп=100, Мп=4950, Тп=5050, took 0.028183 ms
+		testFirstMethodBest() statistics: Сп=100, Мп=0, Тп=100, took 0.000802 ms
+---------
+	testBothMethodsMedium() for 1 runs: 
+		testFirstMethodMedium() statistics: Сп=100, Мп=2266, Тп=2366, took 0.013666 ms
+		testOtherMethodMedium() statistics: Сп=100, Мп=52, Тп=152, took 0.001884 ms
+---------
+
+RUNNING FOR N=200
+	testFirstMethod() for 1 runs:
+		testFirstMethodWorst() statistics: Сп=200, Мп=19900, Тп=20100, took 0.100721 ms
+		testFirstMethodBest() statistics: Сп=200, Мп=0, Тп=200, took 0.001143 ms
+---------
+	testBothMethodsMedium() for 1 runs: 
+		testFirstMethodMedium() statistics: Сп=200, Мп=8564, Тп=8764, took 0.047741 ms
+		testOtherMethodMedium() statistics: Сп=200, Мп=109, Тп=309, took 0.003527 ms
+---------
+
+RUNNING FOR N=500
+	testFirstMethod() for 1 runs:
+		testFirstMethodWorst() statistics: Сп=500, Мп=124750, Тп=125250, took 0.606165 ms
+		testFirstMethodBest() statistics: Сп=500, Мп=0, Тп=500, took 0.002314 ms
+---------
+	testBothMethodsMedium() for 1 runs: 
+		testFirstMethodMedium() statistics: Сп=500, Мп=61134, Тп=61634, took 0.302020 ms
+		testOtherMethodMedium() statistics: Сп=500, Мп=253, Тп=753, took 0.007595 ms
+---------
+
+RUNNING FOR N=1000
+	testFirstMethod() for 1 runs:
+		testFirstMethodWorst() statistics: Сп=1000, Мп=499500, Тп=500500, took 2.427775 ms
+		testFirstMethodBest() statistics: Сп=1000, Мп=0, Тп=1000, took 0.004569 ms
+---------
+	testBothMethodsMedium() for 1 runs: 
+		testFirstMethodMedium() statistics: Сп=1000, Мп=254091, Тп=255091, took 1.250503 ms
+		testOtherMethodMedium() statistics: Сп=1000, Мп=509, Тп=1509, took 0.015289 ms
+---------
+
+RUNNING FOR N=2000
+	testFirstMethod() for 1 runs:
+		testFirstMethodWorst() statistics: Сп=2000, Мп=1999000, Тп=2001000, took 9.523869 ms
+		testFirstMethodBest() statistics: Сп=2000, Мп=0, Тп=2000, took 0.007865 ms
+---------
+	testBothMethodsMedium() for 1 runs: 
+		testFirstMethodMedium() statistics: Сп=2000, Мп=1005082, Тп=1007082, took 4.767976 ms
+		testOtherMethodMedium() statistics: Сп=2000, Мп=971, Тп=2971, took 0.030668 ms
+---------
+
+RUNNING FOR N=5000
+	testFirstMethod() for 1 runs:
+		testFirstMethodWorst() statistics: Сп=5000, Мп=12497500, Тп=12502500, took 59.287127 ms
+		testFirstMethodBest() statistics: Сп=5000, Мп=0, Тп=5000, took 0.022282 ms
+---------
+	testBothMethodsMedium() for 1 runs: 
+		testFirstMethodMedium() statistics: Сп=5000, Мп=6178707, Тп=6183707, took 29.289154 ms
+		testOtherMethodMedium() statistics: Сп=5000, Мп=2532, Тп=7532, took 0.078919 ms
+---------
+
+RUNNING FOR N=10000
+	testFirstMethod() for 1 runs:
+		testFirstMethodWorst() statistics: Сп=10000, Мп=49995000, Тп=50005000, took 236.746269 ms
+		testFirstMethodBest() statistics: Сп=10000, Мп=0, Тп=10000, took 0.044735 ms
+---------
+	testBothMethodsMedium() for 1 runs: 
+		testFirstMethodMedium() statistics: Сп=10000, Мп=25042001, Тп=25052001, took 119.494483 ms
+		testOtherMethodMedium() statistics: Сп=10000, Мп=4952, Тп=14952, took 0.152778 ms
+---------
