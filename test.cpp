@@ -5,8 +5,9 @@
 
 void testBubbleSortWorst(size_t n) {
   int *arr = new int[n];
-  for (int i = n; i > 0; i--)
-    arr[i] = i;
+  for (int i = 0; i < n; i++) {
+    arr[i] = n - i;
+  }
   auto test = [&](size_t n) { return bubbleSort(arr, n); };
   std::cout << "\t\ttestBubbleSortWorst statistics: "
             << measureTime(test, n).toString() << std::endl;

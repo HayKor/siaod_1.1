@@ -1,4 +1,6 @@
+#include "include/methods.h"
 #include "include/test.h"
+#include "include/util.h"
 #include <iostream>
 
 int main() {
@@ -8,5 +10,19 @@ int main() {
     testBubbleSort(n);
     std::cout << "---------" << std::endl;
   }
+  // const int n = 10;
+  // int *arr = new int[n];
+  // for (int i = 0; i < n; i++) {
+  //   arr[i] = n - i;
+  // }
+  // for (int i = 0; i < n; i++)
+  //   std::cout << " " << arr[i];
+  // std::cout << std::endl;
+  // bubbleSort(arr, n);
+  // for (int i = 0; i < n; i++)
+  //   std::cout << " " << arr[i];
+  // std::cout << std::endl;
+  //
+  // delete[] arr;
   return 0;
 }
