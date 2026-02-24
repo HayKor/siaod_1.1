@@ -3,6 +3,63 @@
 #include <cstring>
 #include <iostream>
 
+void testBothSortWorst(size_t n) {
+  int *arr = new int[n];
+  int *copy = new int[n];
+  for (int i = 0; i < n; i++) {
+    arr[i] = n - i;
+  }
+  std::memcpy(copy, arr, n * sizeof(int));
+  auto testInsertion = [&](size_t n) { return insertionSort(arr, n); };
+  auto testBubble = [&](size_t n) { return bubbleSort(copy, n); };
+  std::cout << "\t\ttestBubbleSortWorst() statistics: "
+            << measureTime(testBubble, n).toString() << std::endl;
+  std::cout << "\t\ttestInsertionSortWorst() statistics: "
+            << measureTime(testInsertion, n).toString() << std::endl;
+  delete[] arr;
+  delete[] copy;
+}
+
+void testBothSortBest(size_t n) {
+  int *arr = new int[n];
+  int *copy = new int[n];
+  for (int i = 0; i < n; i++) {
+    arr[i] = i;
+  }
+  std::memcpy(copy, arr, n * sizeof(int));
+  auto testInsertion = [&](size_t n) { return insertionSort(arr, n); };
+  auto testBubble = [&](size_t n) { return bubbleSort(copy, n); };
+  std::cout << "\t\ttestBubbleSortBest() statistics: "
+            << measureTime(testBubble, n).toString() << std::endl;
+  std::cout << "\t\ttestInsertionSortBest() statistics: "
+            << measureTime(testInsertion, n).toString() << std::endl;
+  delete[] arr;
+  delete[] copy;
+}
+
+void testBothSortMedium(size_t n) {
+  int *arr = generateRandomIntArray(n);
+  int *copy = new int[n];
+  std::memcpy(copy, arr, n * sizeof(int));
+  auto testInsertion = [&](size_t n) { return insertionSort(arr, n); };
+  auto testBubble = [&](size_t n) { return bubbleSort(copy, n); };
+  std::cout << "\t\ttestBubbleSortMedium() statistics: "
+            << measureTime(testBubble, n).toString() << std::endl;
+  std::cout << "\t\ttestInsertionSortMedium() statistics: "
+            << measureTime(testInsertion, n).toString() << std::endl;
+  delete[] arr;
+  delete[] copy;
+}
+
+void testBothSort(size_t n) {
+  std::cout << "\ttestBothSortBest(): " << std::endl;
+  testBothSortBest(n);
+  std::cout << "\ttestBothSortMedium(): " << std::endl;
+  testBothSortMedium(n);
+  std::cout << "\ttestBothSortWorst(): " << std::endl;
+  testBothSortWorst(n);
+}
+
 void testBubbleSortWorst(size_t n) {
   int *arr = new int[n];
   for (int i = 0; i < n; i++) {

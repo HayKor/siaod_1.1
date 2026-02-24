@@ -1,0 +1,122 @@
+
+RUNNING FOR N=100
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=99, Мп=0, Тп=99, took 0.001193 ms
+                testInsertionSortBest() statistics: Сп=99, Мп=99, Тп=198, took 0.001103 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=4895, Мп=7314, Тп=12209, took 0.049404 ms
+                testInsertionSortMedium() statistics: Сп=2533, Мп=2537, Тп=5070, took 0.018265 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=4950, Мп=14850, Тп=19800, took 0.049434 ms
+                testInsertionSortWorst() statistics: Сп=4950, Мп=5049, Тп=9999, took 0.031591 ms
+---------
+RUNNING FOR N=200
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=199, Мп=0, Тп=199, took 0.001152 ms
+                testInsertionSortBest() statistics: Сп=199, Мп=199, Тп=398, took 0.001834 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=19729, Мп=29136, Тп=48865, took 0.172618 ms
+                testInsertionSortMedium() statistics: Сп=9907, Мп=9911, Тп=19818, took 0.063601 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=19900, Мп=59700, Тп=79600, took 0.194611 ms
+                testInsertionSortWorst() statistics: Сп=19900, Мп=20099, Тп=39999, took 0.120329 ms
+---------
+RUNNING FOR N=500
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=499, Мп=0, Тп=499, took 0.002335 ms
+                testInsertionSortBest() statistics: Сп=499, Мп=499, Тп=998, took 0.003927 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=123889, Мп=189621, Тп=313510, took 0.987939 ms
+                testInsertionSortMedium() statistics: Сп=63702, Мп=63706, Тп=127408, took 0.381245 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=124750, Мп=374250, Тп=499000, took 1.230350 ms
+                testInsertionSortWorst() statistics: Сп=124750, Мп=125249, Тп=249999, took 0.734617 ms
+---------
+RUNNING FOR N=1000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=999, Мп=0, Тп=999, took 0.004659 ms
+                testInsertionSortBest() statistics: Сп=999, Мп=999, Тп=1998, took 0.007584 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=498905, Мп=727779, Тп=1226684, took 4.025836 ms
+                testInsertionSortMedium() statistics: Сп=243587, Мп=243592, Тп=487179, took 1.490915 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=499500, Мп=1498500, Тп=1998000, took 4.982246 ms
+                testInsertionSortWorst() statistics: Сп=499500, Мп=500499, Тп=999999, took 3.035854 ms
+---------
+RUNNING FOR N=2000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=1999, Мп=0, Тп=1999, took 0.008757 ms
+                testInsertionSortBest() statistics: Сп=1999, Мп=1999, Тп=3998, took 0.036920 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=1998964, Мп=3050481, Тп=5049445, took 15.284869 ms
+                testInsertionSortMedium() statistics: Сп=1018824, Мп=1018826, Тп=2037650, took 6.177078 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=1999000, Мп=5997000, Тп=7996000, took 19.667585 ms
+                testInsertionSortWorst() statistics: Сп=1999000, Мп=2000999, Тп=3999999, took 12.183842 ms
+---------
+RUNNING FOR N=5000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=4999, Мп=0, Тп=4999, took 0.021842 ms
+                testInsertionSortBest() statistics: Сп=4999, Мп=4999, Тп=9998, took 0.037401 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=12492550, Мп=18647532, Тп=31140082, took 93.376189 ms
+                testInsertionSortMedium() statistics: Сп=6220839, Мп=6220843, Тп=12441682, took 37.349013 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=12497500, Мп=37492500, Тп=49990000, took 122.001290 ms
+                testInsertionSortWorst() statistics: Сп=12497500, Мп=12502499, Тп=24999999, took 72.993504 ms
+---------
+RUNNING FOR N=10000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=9999, Мп=0, Тп=9999, took 0.041819 ms
+                testInsertionSortBest() statistics: Сп=9999, Мп=9999, Тп=19998, took 0.072308 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=49989747, Мп=74735184, Тп=124724931, took 361.054058 ms
+                testInsertionSortMedium() statistics: Сп=24921723, Мп=24921727, Тп=49843450, took 127.249382 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=49995000, Мп=149985000, Тп=199980000, took 404.175461 ms
+                testInsertionSortWorst() statistics: Сп=49995000, Мп=50004999, Тп=99999999, took 198.838906 ms
+---------
+RUNNING FOR N=100000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=99999, Мп=0, Тп=99999, took 0.276436 ms
+                testInsertionSortBest() statistics: Сп=99999, Мп=99999, Тп=199998, took 0.480714 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=4999846715, Мп=7491616611, Тп=12491463326, took 25939.691445 ms
+                testInsertionSortMedium() statistics: Сп=2497305524, Мп=2497305536, Тп=4994611060, took 6527.537207 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=4999950000, Мп=14999850000, Тп=19999800000, took 22170.362899 ms
+                testInsertionSortWorst() statistics: Сп=4999950000, Мп=5000049999, Тп=9999999999, took 13086.785847 ms
+---------
+RUNNING FOR N=200000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=199999, Мп=0, Тп=199999, took 0.361240 ms
+                testInsertionSortBest() statistics: Сп=199999, Мп=199999, Тп=399998, took 0.653280 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=19999890409, Мп=29977430685, Тп=49977321094, took 107795.238164 ms
+                testInsertionSortMedium() statistics: Сп=9992676882, Мп=9992676894, Тп=19985353776, took 26193.315466 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=19999900000, Мп=59999700000, Тп=79999600000, took 87908.335158 ms
+                testInsertionSortWorst() statistics: Сп=19999900000, Мп=20000099999, Тп=39999999999, took 52535.882670 ms
+---------
+RUNNING FOR N=500000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=499999, Мп=0, Тп=499999, took 1.068260 ms
+                testInsertionSortBest() statistics: Сп=499999, Мп=499999, Тп=999998, took 1.636233 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=124999262422, Мп=187751577507, Тп=312750839929, took 691673.869456 ms
+                testInsertionSortMedium() statistics: Сп=62498765432, Мп=62498765444, Тп=124997530876, took 162044.362900 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=124999750000, Мп=374999250000, Тп=499999000000, took 561100.000000 ms
+                testInsertionSortWorst() statistics: Сп=124999750000, Мп=125000249999, Тп=249999999999, took 389963.578800 ms
+---------
+RUNNING FOR N=1000000
+        testBothSortBest(): 
+                testBubbleSortBest() statistics: Сп=999999, Мп=0, Тп=999999, took 2.136520 ms
+                testInsertionSortBest() statistics: Сп=999999, Мп=999999, Тп=1999998, took 3.272466 ms
+        testBothSortMedium(): 
+                testBubbleSortMedium() statistics: Сп=499998500000, Мп=749997750000, Тп=1249996250000, took 2766695.477824 ms
+                testInsertionSortMedium() statistics: Сп=249998765432, Мп=249998765444, Тп=499997530876, took 648177.451600 ms
+        testBothSortWorst(): 
+                testBubbleSortWorst() statistics: Сп=499999500000, Мп=1499998500000, Тп=1999998000000, took 2244400.000000 ms
+                testInsertionSortWorst() statistics: Сп=499999500000, Мп=500000499999, Тп=999999999999, took 1559854.315200 ms
+---------

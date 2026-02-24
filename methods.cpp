@@ -65,3 +65,29 @@ ComplexityMetrics bubbleSort(int *arr, size_t n) {
   metrics.total = metrics.comparisons + metrics.moves;
   return metrics;
 }
+
+ComplexityMetrics insertionSort(int *arr, size_t n) {
+  ComplexityMetrics metrics;
+
+  for (size_t i = 1; i < n; ++i) {
+    int key = arr[i];
+    int j = static_cast<int>(i - 1);
+
+    while (j >= 0) {
+      metrics.comparisons++;
+      if (arr[j] > key) {
+        arr[j + 1] = arr[j];
+        metrics.moves++;
+        j--;
+      } else {
+        break;
+      }
+    }
+
+    arr[j + 1] = key;
+    metrics.moves++;
+  }
+
+  metrics.total = metrics.comparisons + metrics.moves;
+  return metrics;
+}
